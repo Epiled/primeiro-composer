@@ -1,0 +1,18 @@
+{
+    "name": "felipe-de/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FelipeDe\\BuscadorCursos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felipe De Andrade",
+            "email": "felipe.deam98@gmail.com"
+        }
+    ],
+    "require": {}
+}
