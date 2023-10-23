@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "FelipeDe\\BuscadorCursos\\": "src/"
+            "Alura\\BuscadorDeCursos\\": "src/"
         }
     },
     "authors": [
@@ -14,5 +14,30 @@
             "email": "felipe.deam98@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/dom-crawler": "^6.3",
+        "symfony/css-selector": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phan/phan": "^5.4"
+    }, 
+    "scripts": {
+        "test": "phpunit tests\\TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
 }
